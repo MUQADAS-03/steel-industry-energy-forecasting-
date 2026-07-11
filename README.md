@@ -93,15 +93,19 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
   shifts* (captured by `Load_Type` and `Hour`) rather than random fluctuation.
 
   <img width="1185" height="585" alt="boxplot_outliers" src="https://github.com/user-attachments/assets/f81b0c8e-aab2-43a8-bea8-04f88343f0e9" />
+  
  — Usage_kWh boxplot showing outliers
 
 <img width="1494" height="1335" alt="image" src="https://github.com/user-attachments/assets/d23d4667-fce6-4443-b4e5-74d6b515f782" />
+
  — full correlation heatmap
 
 <img width="1035" height="735" alt="image" src="https://github.com/user-attachments/assets/5c3b3f94-3db4-452e-a9c5-66145049e6f9" />
+
 — grouped bar chart
 
-<img width="1035" height="735" alt="image" src="https://github.com/user-attachments/assets/eb5963ba-90f1-4efa-9a02-fe518cb30e23" />
+<img width="1485" height="735" alt="image" src="https://github.com/user-attachments/assets/7d59ccf9-984c-4e5b-9e1f-83818061b87a" />
+
 — hourly line chart
 
 ---
@@ -146,12 +150,15 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
 and `NSM` (seconds since midnight) ranked highest — consistent with the EDA correlation findings.
 
 <img width="1185" height="735" alt="image" src="https://github.com/user-attachments/assets/959f1bd9-d0ca-49a0-9bbf-5c11cd784bfa" />
+
  — RMSE comparison across all 4 models
 
  <img width="1034" height="1035" alt="image" src="https://github.com/user-attachments/assets/106ad5eb-f1db-4cb3-a73f-0ca733c645ba" />
+ 
 — Predicted vs Actual scatter for Random Forest
 
 <img width="1185" height="735" alt="image" src="https://github.com/user-attachments/assets/6b4bfae8-ee13-45e0-bad7-923e3f44f0df" />
+
 — Top 10 feature importances
 
 ---

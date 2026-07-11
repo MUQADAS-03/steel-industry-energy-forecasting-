@@ -59,7 +59,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-**Key libraries used:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `joblib` — full
+**Key libraries used:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `joblib` full
 pinned versions are listed in [`requirements.txt`](requirements.txt).
 
 ---

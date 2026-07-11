@@ -75,7 +75,7 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
 | 5 | `Power_Factor_Ratio` | `Leading_Current_Power_Factor` ÷ `Lagging_Current_Power_Factor` |
 | 6 | `High_Load` | 1 if `Usage_kWh` is above the 75th percentile (**51.24 kWh**), else 0 *(used only for EDA — dropped before modeling to prevent data leakage)* |
 
-##  EDA Findings (Quantitative Insights)
+##  EDA Findings
 
 - **Data quality:** 0 missing values, 0 duplicate rows — clean dataset requiring no imputation.
 - **Outliers:** IQR method flagged **328 outliers (0.94% of data)** in `Usage_kWh`, valid range

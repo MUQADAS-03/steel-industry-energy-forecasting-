@@ -23,7 +23,7 @@ to a validated baseline model.
 
 ---
 
-## 📊 Dataset Information
+##  Dataset Information
 
 | Detail | Value |
 |---|---|
@@ -87,7 +87,7 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
   3. `Lagging_Current_Power_Factor` — r = **0.39**
 - **Load Type impact:** Average usage scales sharply from Light → Medium → Maximum Load, confirming
   `Load_Type` is a major driver of consumption.
-- **Hourly pattern:** Usage rises during working hours and drops overnight — a clear daily cycle tied
+- **Hourly pattern:** Usage rises during working hours and drops overnight a clear daily cycle tied
   to production shifts.
 - **Hypothesis:** Energy spikes are primarily driven by the *scheduling of high-intensity production
   shifts* (captured by `Load_Type` and `Hour`) rather than random fluctuation.

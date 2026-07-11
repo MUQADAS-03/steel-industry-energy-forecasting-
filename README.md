@@ -42,7 +42,7 @@ to a validated baseline model.
 The dataset is stored in [`data/Steel_industry_data.csv`](data/Steel_industry_data.csv).
 
 
-## ⚙️ Environment Setup
+##  Environment Setup
 
 **Option 1 — Google Colab (recommended, zero setup)**
 1. Open either notebook in [Google Colab](https://colab.research.google.com/).
@@ -75,11 +75,7 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
 | 5 | `Power_Factor_Ratio` | `Leading_Current_Power_Factor` ÷ `Lagging_Current_Power_Factor` |
 | 6 | `High_Load` | 1 if `Usage_kWh` is above the 75th percentile (**51.24 kWh**), else 0 *(used only for EDA — dropped before modeling to prevent data leakage)* |
 
-📸 *Screenshot placeholder:* `screenshots/engineered_dataframe_head.png` — first rows of the dataframe after feature engineering.
-
----
-
-## 🔍 EDA Findings (Quantitative Insights)
+##  EDA Findings (Quantitative Insights)
 
 - **Data quality:** 0 missing values, 0 duplicate rows — clean dataset requiring no imputation.
 - **Outliers:** IQR method flagged **328 outliers (0.94% of data)** in `Usage_kWh`, valid range
@@ -97,15 +93,20 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
   shifts* (captured by `Load_Type` and `Hour`) rather than random fluctuation.
 
   <img width="1185" height="585" alt="boxplot_outliers" src="https://github.com/user-attachments/assets/f81b0c8e-aab2-43a8-bea8-04f88343f0e9" />
-
  — Usage_kWh boxplot showing outliers
-- `screenshots/correlation_heatmap.png` — full correlation heatmap
-- `screenshots/avg_usage_by_load_type.png` — grouped bar chart
-- `screenshots/avg_usage_by_hour.png` — hourly line chart
+
+<img width="1494" height="1335" alt="image" src="https://github.com/user-attachments/assets/d23d4667-fce6-4443-b4e5-74d6b515f782" />
+ — full correlation heatmap
+
+<img width="1035" height="735" alt="image" src="https://github.com/user-attachments/assets/5c3b3f94-3db4-452e-a9c5-66145049e6f9" />
+— grouped bar chart
+
+<img width="1035" height="735" alt="image" src="https://github.com/user-attachments/assets/eb5963ba-90f1-4efa-9a02-fe518cb30e23" />
+— hourly line chart
 
 ---
 
-## 🤖 Model Training Process
+##  Model Training Process
 
 1. Loaded the engineered dataset from Part 1 and dropped `date` and `High_Load` (leakage columns).
 2. Encoded categorical columns (`WeekStatus`, `Day_of_week`, `Load_Type`) using **One-Hot Encoding**,
@@ -116,15 +117,16 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
 5. Evaluated each on the test set using **MAE, RMSE, and R²**, plus **5-fold cross-validation RMSE**
    to check consistency across data splits.
 
-📸 *Screenshot placeholder:* `screenshots/model_metrics_output.png` — printed metrics for all 4 models.
+<img width="1335" height="313" alt="image" src="https://github.com/user-attachments/assets/52535f8e-8590-4936-98ee-d18ad20047f4" />
+— printed metrics for all 4 models.
 
 ---
 
-## 📈 Results and Conclusions (Quantitative)
+##  Results and Conclusions (Quantitative)
 
 | Model | MAE | Test RMSE | R² | 5-Fold CV RMSE |
 |---|---|---|---|---|
-| **Random Forest** ✅ | **0.35** | **1.05** | **0.999** | **1.02** |
+| **Random Forest**  | **0.35** | **1.05** | **0.999** | **1.02** |
 | Decision Tree | 0.55 | 1.51 | 0.998 | 1.48 |
 | Linear Regression | 2.63 | 4.15 | 0.985 | 4.51 |
 | Ridge Regression | 4.36 | 6.27 | 0.965 | 6.23 |
@@ -138,19 +140,23 @@ pinned versions are listed in [`requirements.txt`](requirements.txt).
 - Decision Tree alone shows more variance across folds than Random Forest, which reduces variance through
   ensembling — hence Random Forest is more stable.
 
-**➡️ Model carried forward: Random Forest Regressor**, saved as `Random_Forest_best_model.pkl`.
+** Model carried forward: Random Forest Regressor**, saved as `Random_Forest_best_model.pkl`.
 
 **Top predictive features (Random Forest importance):** `CO2(tCO2)`, `Lagging_Current_Reactive.Power_kVarh`,
 and `NSM` (seconds since midnight) ranked highest — consistent with the EDA correlation findings.
 
-📸 *Screenshot placeholders:*
-- `screenshots/rmse_comparison_barchart.png` — RMSE comparison across all 4 models
-- `screenshots/predicted_vs_actual_scatter.png` — Predicted vs Actual scatter for Random Forest
-- `screenshots/feature_importance_barchart.png` — Top 10 feature importances
+<img width="1185" height="735" alt="image" src="https://github.com/user-attachments/assets/959f1bd9-d0ca-49a0-9bbf-5c11cd784bfa" />
+ — RMSE comparison across all 4 models
+
+ <img width="1034" height="1035" alt="image" src="https://github.com/user-attachments/assets/106ad5eb-f1db-4cb3-a73f-0ca733c645ba" />
+— Predicted vs Actual scatter for Random Forest
+
+<img width="1185" height="735" alt="image" src="https://github.com/user-attachments/assets/6b4bfae8-ee13-45e0-bad7-923e3f44f0df" />
+— Top 10 feature importances
 
 ---
 
-## 🎯 Key Takeaways
+##  Key Takeaways
 
 - Energy usage is highly predictable from electrical load measurements (CO2 output, reactive power) and
   time-of-day/load-type context — R² of 0.999 shows the baseline model already explains nearly all variance.
@@ -160,7 +166,7 @@ and `NSM` (seconds since midnight) ranked highest — consistent with the EDA co
 
 ---
 
-## 👤 Author
+## Author
 
 Muqadas — BS Business Data Analytics, COMSATS University Islamabad
-Internship: ITSimplera Solutions (2026)
+Internship: ITSimplera Solutions

@@ -39,8 +39,6 @@ to a validated baseline model.
 `Leading_Current_Reactive_Power_kVarh`, `CO2(tCO2)`, `Lagging_Current_Power_Factor`,
 `Leading_Current_Power_Factor`, `NSM`, `WeekStatus`, `Day_of_week`, `Load_Type`
 
-The dataset is stored in [`data/Steel_industry_data.csv`](data/Steel_industry_data.csv).
-
 
 ##  Environment Setup
 
